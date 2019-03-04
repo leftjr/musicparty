@@ -1,0 +1,37 @@
+.Calparcel {
+    width: 100%;
+    position: relative;
+}
+
+.Calparcel>.Callist {
+    list-style: none;
+    overflow: hidden;
+}
+
+.Calparcel>.Callist>li {
+    float: left;
+}
+
+.Calparcel>.Callist>li>img {
+    display: block;
+    width: 100%;
+}
+.Calparcel>.Calnav{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    font-size: 0;
+}
+.Calparcel>.Calnav>li{
+    display: inline-block;
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: black;
+}
+.Calparcel>.Calnav>li.active{
+    background: pink;
+}

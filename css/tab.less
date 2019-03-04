@@ -1,0 +1,123 @@
+@import "./extend/clearfix";
+@import "./font/font";
+@rem: 1080/16rem;
+#warp {
+    .content {
+        .tab-warp {
+            margin: 0 auto;
+            width: 1046/@rem;
+            background: #fff;
+            overflow: hidden;
+            .tab-head {
+                &:extend(.clearfix all);
+                height: 135/@rem;
+                line-height: 135/@rem;
+                h2 {
+                    float: left;
+                    margin: 0;
+                    font-size: 66/@rem;
+                }
+                span {
+                    float: right;
+                    font-size: 41/@rem;
+                    i {
+                        margin-left: 20/@rem;
+                    }
+                }
+            }
+            .tab-nav {
+                height: 105/@rem;
+                line-height: 105/@rem;
+                position: relative;
+                a {
+                    margin-right: 15/@rem;
+                    float: left;
+                    height: 105/@rem;
+                    text-align: center;
+                    color: #6b6b6b;
+                    font-size: 44/@rem;
+                }
+                span {
+                    transition: 1s transform,1s width;
+                    position: absolute;
+                    left: 0;
+                    bottom: 10/@rem;
+                    display: inline-block;
+                    width: 90/@rem;
+                    height: 9/@rem;
+                    background: #6f900d;
+                }
+            }
+
+            .tab-content {
+                &:extend(.clearfix all);
+                width: 300%;
+                // transform: translateX(-1046/@rem);
+                &>ul{
+                    width: 33.33333333%;
+                    float: left;
+                }
+                .list {
+                    &:extend(.clearfix all);
+                    li {
+                        float: left;
+                        box-sizing: border-box;
+                        width: 506/@rem;
+                        margin: 8/@rem;
+                        padding: 5/@rem;
+                        font-size: 40/@rem;
+                        background: #efefef;
+                        .top {
+                            a {
+                                img {
+                                    width: 100%;
+                                }
+                                span {
+                                    width: 100%;
+                                    color: #000;
+                                    display: inline-block;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+                        .bottom {
+                            &:extend(.clearfix all);
+                            .play {
+                                float: left;
+                                i {
+                                    display: inline-block;
+                                    background: url("../img/ice.png") no-repeat;
+                                    background-position: 0 0;
+                                    width: 40/@rem;
+                                    height: 40/@rem;
+                                    vertical-align: middle;
+                                }
+                                span {}
+                            }
+                            .discuss {
+                                float: left;
+                                i {
+                                    display: inline-block;
+                                    background: url("../img/ice.png") no-repeat;
+                                    background-position: 0 -55/@rem;
+                                    width: 40/@rem;
+                                    height: 40/@rem;
+                                    vertical-align: middle;
+                                }
+                                span {}
+                            }
+                        }
+                    }
+                }
+                .loading{
+                    opacity: 0;
+                    height: 101/@rem;
+                    background: url("../img/loading.gif") no-repeat;
+                    background-position: center;
+                }
+            }
+        }
+    }
+}

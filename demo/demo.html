@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #warp {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #app {
+            width: 100%;
+            background: pink;
+            text-align: center;
+        }
+
+        .bar {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 4px;
+            height: 40px;
+            background: blue;
+            transition: 1s opacity;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="warp">
+        <div id="app"></div>
+        <div class="bar"></div>
+    </div>
+</body>
+<script src="./transform.js"></script>
+<script src="./he.js"></script>
+<script>
+    window.onload = function () {
+        var app = document.querySelector("#app");
+        var bar = document.querySelector(".bar");
+        var minY = 0;
+        var barY = 0;
+        setTimeout(function(){
+            var solia = document.documentElement.clientHeight / app.offsetHeight;
+            bar.style.height = document.documentElement.clientHeight*solia+"px";
+            minY = document.documentElement.clientHeight - app.offsetHeight;
+            barY = bar.offsetHeight-document.documentElement.clientHeight;
+        },20);
+        var barbox = {
+            start: function () {
+                bar.style.opacity = 1;
+            },
+            move: function(){
+                bar.style.opacity = 1;
+                // 滚动条位移的实时距离 / 滚动条位移的最大距离 = 内容区位移的实时距离 / 内容区位移的最大距离
+                // 滚动条位移的实时距离 = (内容区位移的实时距离 / 内容区位移的最大距离) * 滚动条位移的最大距离
+                transform.css(bar,"translateY",-transform.css(app,"translateY")/minY*barY); 
+            },
+            end:function(){
+                bar.style.opacity = 0;
+            },
+            over:function(){
+                bar.style.opacity = 0;
+            }
+        };
+        for (var i = 0; i < 250; i++) {
+            app.innerHTML += "i=" + i + "<br/>";
+        }
+        he.he(barbox);
+    }
+</script>
+
+</html>

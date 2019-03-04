@@ -1,0 +1,140 @@
+.clearfix,
+#warp .content .tab-warp .tab-head,
+#warp .content .tab-warp .tab-content,
+#warp .content .tab-warp .tab-content .list,
+#warp .content .tab-warp .tab-content .list li .bottom {
+  *zoom: 1;
+}
+.clearfix::after,
+#warp .content .tab-warp .tab-head::after,
+#warp .content .tab-warp .tab-content::after,
+#warp .content .tab-warp .tab-content .list::after,
+#warp .content .tab-warp .tab-content .list li .bottom::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?ef4eek');
+  src: url('../fonts/icomoon.eot?ef4eek#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?ef4eek') format('truetype'), url('../fonts/icomoon.woff?ef4eek') format('woff'), url('../fonts/icomoon.svg?ef4eek#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-circle-right:before {
+  content: "\ea42";
+}
+#warp .content .tab-warp {
+  margin: 0 auto;
+  width: 15.4962963rem;
+  background: #fff;
+  overflow: hidden;
+}
+#warp .content .tab-warp .tab-head {
+  height: 2rem;
+  line-height: 2rem;
+}
+#warp .content .tab-warp .tab-head h2 {
+  float: left;
+  margin: 0;
+  font-size: 0.97777778rem;
+}
+#warp .content .tab-warp .tab-head span {
+  float: right;
+  font-size: 0.60740741rem;
+}
+#warp .content .tab-warp .tab-head span i {
+  margin-left: 0.2962963rem;
+}
+#warp .content .tab-warp .tab-nav {
+  height: 1.55555556rem;
+  line-height: 1.55555556rem;
+  position: relative;
+}
+#warp .content .tab-warp .tab-nav a {
+  margin-right: 0.22222222rem;
+  float: left;
+  height: 1.55555556rem;
+  text-align: center;
+  color: #6b6b6b;
+  font-size: 0.65185185rem;
+}
+#warp .content .tab-warp .tab-nav span {
+  transition: 1s transform,1s width;
+  position: absolute;
+  left: 0;
+  bottom: 0.14814815rem;
+  display: inline-block;
+  width: 1.33333333rem;
+  height: 0.13333333rem;
+  background: #6f900d;
+}
+#warp .content .tab-warp .tab-content {
+  width: 300%;
+}
+#warp .content .tab-warp .tab-content > ul {
+  width: 33.33333333%;
+  float: left;
+}
+#warp .content .tab-warp .tab-content .list li {
+  float: left;
+  box-sizing: border-box;
+  width: 7.4962963rem;
+  margin: 0.11851852rem;
+  padding: 0.07407407rem;
+  font-size: 0.59259259rem;
+  background: #efefef;
+}
+#warp .content .tab-warp .tab-content .list li .top a img {
+  width: 100%;
+}
+#warp .content .tab-warp .tab-content .list li .top a span {
+  width: 100%;
+  color: #000;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#warp .content .tab-warp .tab-content .list li .bottom .play {
+  float: left;
+}
+#warp .content .tab-warp .tab-content .list li .bottom .play i {
+  display: inline-block;
+  background: url("../img/ice.png") no-repeat;
+  background-position: 0 0;
+  width: 0.59259259rem;
+  height: 0.59259259rem;
+  vertical-align: middle;
+}
+#warp .content .tab-warp .tab-content .list li .bottom .discuss {
+  float: left;
+}
+#warp .content .tab-warp .tab-content .list li .bottom .discuss i {
+  display: inline-block;
+  background: url("../img/ice.png") no-repeat;
+  background-position: 0 -0.81481481rem;
+  width: 0.59259259rem;
+  height: 0.59259259rem;
+  vertical-align: middle;
+}
+#warp .content .tab-warp .tab-content .loading {
+  opacity: 0;
+  height: 1.4962963rem;
+  background: url("../img/loading.gif") no-repeat;
+  background-position: center;
+}

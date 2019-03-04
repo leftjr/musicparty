@@ -1,0 +1,41 @@
+@import "./mixin/mixin.less";
+@import "./extend/clearfix.less";
+@rem:1080/16rem;
+#warp{
+    &>.content{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 270/@rem;
+        overflow: hidden;
+        .nav{
+            .onePx(bottom,black);
+            box-sizing: border-box;
+            height: 177/@rem;
+            padding:31/@rem 0 14/@rem 0;
+            &>.list{
+                &:extend(.clearfix all);
+                white-space: nowrap;
+                float: left;
+                li{
+                    display: inline-block;
+                    height: 129/@rem;
+                    padding: 0 38/@rem;
+                    line-height: 129/@rem;
+                    a{
+                        font-size: 61/@rem;
+                        font-weight: 500;
+                        color: #020202;
+                    }
+                    &.active{
+                        background: #690;
+                        a{
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

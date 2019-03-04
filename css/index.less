@@ -1,0 +1,34 @@
+@import "reset";
+@import "head";
+@import "content";
+@import "./lb.less";
+@import "./tab.less";
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        #warp {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #eee;
+            font-size: 0;
+            .bar{
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 4px;
+                height: 20px;
+                background: blue;
+                transition: 1s opacity;
+                opacity: 0;
+            }
+        }
+    }
+}
